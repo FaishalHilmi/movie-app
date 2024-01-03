@@ -4,8 +4,13 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        jost: ["Jost", "sans-serif"],
-        deca: ["Lexend Deca", "sans-serif"],
+        roboto: ["Roboto", "sans-serif"],
+        figtree: ["Figtree", "sans-serif"],
+      },
+      colors: {
+        primary: "#0F1428",
+        secondary: "#16203D",
+        cyan: "#0CB89F",
       },
     },
   },
