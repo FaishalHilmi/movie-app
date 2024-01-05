@@ -1,11 +1,11 @@
 import React from "react";
 import PopularPage from "../fragment/PopularPage";
 
-function Popular({ movies }) {
+function Popular({ movies, title }) {
   return (
     <section>
       <div className="bg-primary py-8">
-        <PopularPage movies={movies} />
+        <PopularPage movies={movies} title={title} />
       </div>
     </section>
   );

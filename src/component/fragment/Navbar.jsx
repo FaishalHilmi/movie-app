@@ -20,7 +20,7 @@ function Navbar() {
 
   return (
     <nav className="flex justify-center">
-      <div className="nav-wrapper max-w-[1040px] py-5 flex items-center justify-between font-figtree bg-transparent absolute z-50 w-full">
+      <div className="nav-wrapper max-w-[1040px] py-5 px-5 md:px-0 flex items-center justify-center md:justify-between font-figtree bg-transparent absolute z-50 w-full">
         <LogoNavbar />
         <NavLinks links={dataLinks} />
       </div>

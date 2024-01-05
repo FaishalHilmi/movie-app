@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 function NavLinks({ links }) {
   return (
-    <div className="nav-link">
+    <div className="nav-link hidden md:block">
       <ul className="flex gap-10">
         {links.map((link, index) => {
           return (

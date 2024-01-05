@@ -1,9 +1,9 @@
 import React from "react";
 
-function TitleList() {
+function TitleList({ title }) {
   return (
     <div className="title">
-      <h1 className="font-bold font-roboto text-2xl">Popular</h1>
+      <h1 className="font-bold font-roboto text-2xl">{title}</h1>
     </div>
   );
 }

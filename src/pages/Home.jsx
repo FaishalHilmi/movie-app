@@ -1,31 +1,36 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../component/fragment/Navbar";
 import HeroPage from "../component/fragment/HeroPage";
-import axios from "axios";
 import Popular from "../component/layout/Popular";
+import FreeToWatch from "../component/layout/FreeToWatch";
+import getPopular from "../services/getPopular.service";
+import getMovies from "../services/getMovies.service";
+import axios from "axios";
+import getTvShow from "../services/getTvShow.service";
 
 function Home() {
+  const [popular, setPopular] = useState([]);
   const [movies, setMovies] = useState([]);
-
-  const getMovies = async () => {
-    const response = await axios.get(
-      "https://api.themoviedb.org/3/discover/movie?api_key=a35f55b831697725b5b0b7255abc3736"
-    );
-    const request = await response.data;
-    const result = await request.results;
-
-    setMovies(result);
-  };
+  const [tvShow, setTvShow] = useState([]);
 
   useEffect(() => {
-    getMovies();
+    getPopular((popular) => setPopular(popular));
+  }, []);
+
+  useEffect(() => {
+    getMovies((movies) => setMovies(movies));
+  }, []);
+
+  useEffect(() => {
+    getTvShow((tvShow) => setTvShow(tvShow));
   }, []);
 
   return (
     <>
       <Navbar />
-      <HeroPage movies={movies} />
-      <Popular movies={movies} />
+      <HeroPage movies={popular} />
+      <Popular movies={popular} title="Popular" />
+      <FreeToWatch movies={movies} tvShow={tvShow} title="Free To Watch" />
     </>
   );
 }

@@ -7,12 +7,11 @@ import TitleList from "../element/MovieList/TitleList";
 import ButtonList from "../element/MovieList/ButtonList";
 import MovieList from "../element/MovieList/MovieList";
 
-function PopularPage({ movies }) {
+function PopularPage({ movies, title }) {
   return (
-    <div className="content-wrapper max-w-[1040px] mx-auto text-white">
-      <div className="header flex items-center mb-9">
-        <TitleList />
-        <ButtonList />
+    <div className="content-wrapper max-w-[1040px] px-5 md:px-0 mx-auto text-white">
+      <div className="header flex items-center mb-6">
+        <TitleList title={title} />
       </div>
       <div className="movie-list">
         <MovieList movies={movies} />

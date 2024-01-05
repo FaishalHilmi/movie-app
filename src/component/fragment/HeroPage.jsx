@@ -22,10 +22,10 @@ function HeroPage({ movies }) {
                     className="w-full h-full object-cover"
                   />
                   <div className="gradient h-full w-full bg-gradient-to-t from-primary to-transparent absolute top-0"></div>
-                  <div className="relative border max-w-[1040px] mx-auto">
-                    <div className="text absolute bottom-20 text-white">
-                      <h2 className="text-[42px] font-bold font-roboto mb-3">
-                        {movie.original_title}
+                  <div className="relative max-w-[1040px] px-5 md:px-0 mx-auto">
+                    <div className="text absolute bottom-10 text-white px-5 md:px-0 left-0">
+                      <h2 className="text-3xl md:text-[42px] font-bold font-roboto mb-3">
+                        {movie.original_name}
                       </h2>
                       <p className="font-figtree">{movie.overview}</p>
                     </div>
