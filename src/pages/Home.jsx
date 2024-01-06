@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
-import Navbar from "../component/fragment/Navbar";
 import HeroPage from "../component/fragment/HeroPage";
 import Popular from "../component/layout/Popular";
 import FreeToWatch from "../component/layout/FreeToWatch";
 import getPopular from "../services/getPopular.service";
 import getMovies from "../services/getMovies.service";
-import axios from "axios";
 import getTvShow from "../services/getTvShow.service";
+import Navigasibar from "../component/layout/Navigasibar";
 
 function Home() {
   const [popular, setPopular] = useState([]);
@@ -26,12 +25,12 @@ function Home() {
   }, []);
 
   return (
-    <>
-      <Navbar />
-      <HeroPage movies={popular} />
+    <main>
+      <Navigasibar />
+      <HeroPage movies={tvShow} />
       <Popular movies={popular} title="Popular" />
-      <FreeToWatch movies={movies} tvShow={tvShow} title="Free To Watch" />
-    </>
+      <FreeToWatch movies={movies} tvShow={popular} title="Free To Watch" />
+    </main>
   );
 }
 

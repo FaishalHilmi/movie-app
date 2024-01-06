@@ -10,8 +10,6 @@ function FreeToWatchPage({ movies, tvShow, title }) {
   const [filterSelected, setFilterSelected] = useState([]);
   const [active, setActive] = useState("movies");
 
-  // console.log(filterSelected);
-
   const getMovieList = () => {
     setActive("movies"); // Set filterSelected to identify the active category
     setFilterSelected(movies);
