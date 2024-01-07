@@ -6,6 +6,8 @@ import getPopular from "../services/getPopular.service";
 import getMovies from "../services/getMovies.service";
 import getTvShow from "../services/getTvShow.service";
 import Navigasibar from "../component/layout/Navigasibar";
+import Footer from "../component/layout/Footer";
+import NavigasiBottom from "../component/layout/NavigasiBottom";
 
 function Home() {
   const [popular, setPopular] = useState([]);
@@ -25,11 +27,13 @@ function Home() {
   }, []);
 
   return (
-    <main>
+    <main className="relative bg-primary">
       <Navigasibar />
       <HeroPage movies={tvShow} />
       <Popular movies={popular} title="Popular" />
       <FreeToWatch movies={movies} tvShow={popular} title="Free To Watch" />
+      <Footer />
+      <NavigasiBottom />
     </main>
   );
 }
