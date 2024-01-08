@@ -19,7 +19,7 @@ function HeroPage({ movies }) {
             disableOnInteraction: false,
           }}
           modules={[Autoplay]}
-          className="mySwiper h-screen"
+          className="mySwiper h-screen bg-primary"
         >
           {movies.map((movie) => {
             return (

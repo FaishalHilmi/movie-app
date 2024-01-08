@@ -13,7 +13,7 @@ function Home() {
   const [popular, setPopular] = useState([]);
   const [movies, setMovies] = useState([]);
   const [tvShow, setTvShow] = useState([]);
-  const [gabung, setGabung] = useState();
+  // const [gabung, setGabung] = useState();
 
   useEffect(() => {
     getPopular((popular) => setPopular(popular));
