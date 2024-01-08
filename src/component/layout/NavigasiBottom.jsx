@@ -6,9 +6,9 @@ import { PiTelevisionSimpleFill } from "react-icons/pi";
 
 function NavigasiBottom() {
   return (
-    <nav className="block md:hidden w-full h-full fixed z-50 top-0">
+    <nav className="block md:hidden w-full">
       <div className="content h-full relative">
-        <div className="content-wrapper py-3 font-figtree bg-primary w-full absolute -bottom-[1px] text-white rounded-t-lg">
+        <div className="content-wrapper py-3 font-figtree bg-primary w-full -bottom-[3px] text-white rounded-t-lg fixed z-[999]">
           <div className="icon flex justify-center gap-16">
             <div className="icon-item">
               <NavLink
