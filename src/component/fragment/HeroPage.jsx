@@ -1,15 +1,26 @@
-import React from "react";
-
-// swiper
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
 import Hero from "../element/Hero/Hero";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+
+import "swiper/css/effect-fade";
+import "swiper/css";
 
 function HeroPage({ movies }) {
   return (
     <section>
       <div className="hero-page h-screen  bg-slate-700 font-figtree">
-        <Swiper className="mySwiper h-screen">
+        <Swiper
+          loop={true}
+          spaceBetween={30}
+          centeredSlides={true}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          modules={[Autoplay]}
+          className="mySwiper h-screen"
+        >
           {movies.map((movie) => {
             return (
               <SwiperSlide

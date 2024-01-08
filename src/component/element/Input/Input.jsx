@@ -22,7 +22,7 @@ function Input({ movies, handleFilter }) {
   return (
     <input
       type="search"
-      className="border-none focus:border-none w-4/5 md:w-2/3 px-3 py-1 md:px-4 md:py-2 text-primary rounded-full placeholder:text-gray-300 shadow-lg focus:shadow-slate-600 transition"
+      className="border-none focus:border-none w-4/5 md:w-2/3 px-3 py-2 md:px-4 md:py-2 text-primary rounded-full placeholder:text-gray-300 shadow-lg focus:shadow-slate-600 transition"
       placeholder="Search movies..."
       onChange={(search) => getDataFilter(search.target.value)}
     />

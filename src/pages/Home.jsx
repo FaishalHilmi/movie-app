@@ -13,6 +13,7 @@ function Home() {
   const [popular, setPopular] = useState([]);
   const [movies, setMovies] = useState([]);
   const [tvShow, setTvShow] = useState([]);
+  const [gabung, setGabung] = useState();
 
   useEffect(() => {
     getPopular((popular) => setPopular(popular));
@@ -25,6 +26,12 @@ function Home() {
   useEffect(() => {
     getTvShow((tvShow) => setTvShow(tvShow));
   }, []);
+
+  // useEffect(() => {
+  //   const gabung = [...tvShow, ...movies];
+  //   setGabung(gabung);
+  //   console.log(gabung);
+  // }, [tvShow, movies]);
 
   return (
     <main className="relative bg-primary">
