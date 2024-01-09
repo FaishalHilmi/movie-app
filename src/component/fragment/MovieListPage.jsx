@@ -9,10 +9,6 @@ function MovieListPage({ movies }) {
     setDataMovies(data);
   };
 
-  //   useEffect(() => {
-  //     setDataMovies(dataMovies);
-  //   }, [movies]);
-
   return (
     <div className="content-wrapper max-w-[1040px] mx-auto px-5 mt-20 md:mt-36">
       <div className="search-input flex justify-center mb-6 md:mb-20">

@@ -12,7 +12,6 @@ import NavigasiBottom from "../component/layout/NavigasiBottom";
 function Home() {
   const [popular, setPopular] = useState([]);
   const [movies, setMovies] = useState([]);
-  const [tvShow, setTvShow] = useState([]);
   // const [gabung, setGabung] = useState();
 
   useEffect(() => {
@@ -21,10 +20,6 @@ function Home() {
 
   useEffect(() => {
     getMovies((movies) => setMovies(movies));
-  }, []);
-
-  useEffect(() => {
-    getTvShow((tvShow) => setTvShow(tvShow));
   }, []);
 
   // useEffect(() => {
@@ -36,7 +31,7 @@ function Home() {
   return (
     <main className="relative bg-primary">
       <Navigasibar />
-      <HeroPage movies={tvShow} />
+      <HeroPage movies={movies} />
       <Popular movies={popular} title="Popular" />
       <FreeToWatch movies={movies} tvShow={popular} title="Free To Watch" />
       <Footer />

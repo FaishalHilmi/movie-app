@@ -1,5 +1,3 @@
-import React, { useEffect } from "react";
-
 function Input({ movies, handleFilter }) {
   const getDataFilter = (moviesFilter) => {
     const getMoviesFilter = movies.filter((movie) => {

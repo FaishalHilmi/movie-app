@@ -11,6 +11,8 @@ export default {
         primary: "#0F1428",
         secondary: "#16203D",
         cyan: "#0CB89F",
+        shadow: "rgba(255, 255, 255, 0.25)",
+        shadowBlur: "rgba(0, 0, 0, 0.25)",
       },
     },
   },
