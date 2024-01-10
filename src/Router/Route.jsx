@@ -12,7 +12,7 @@ function RouteLink() {
         <Route path="/" element={<Home />} />
         <Route path="/movies" element={<Movies />} />
         <Route path="/tvshow" element={<Tvshow />} />
-        <Route path="/detail/:id" element={<Detail />} />
+        <Route path="/detail/:original_title" element={<Detail />} />
       </Routes>
     </Router>
   );

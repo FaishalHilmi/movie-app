@@ -11,7 +11,7 @@ function Card({
   id,
 }) {
   return (
-    <Link to={`/detail/${id}`}>
+    <Link to={`/detail/${original_title || original_name}`}>
       <div className="card-wrapper">
         <div className="image rounded-lg overflow-hidden">
           <img

@@ -11,7 +11,6 @@ function HeroPage({ movies }) {
     <section>
       <div className="hero-page h-screen  bg-slate-700 font-figtree">
         <Swiper
-          loop={true}
           spaceBetween={30}
           centeredSlides={true}
           autoplay={{
