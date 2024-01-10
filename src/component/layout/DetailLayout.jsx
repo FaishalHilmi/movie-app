@@ -2,27 +2,43 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa";
+import axios from "axios";
 
 function DetailLayout({ movies }) {
   const [movie, setMovie] = useState();
 
-  const { original_title } = useParams();
+  const { id } = useParams();
 
   useEffect(() => {
-    if (movies) {
-      const findMovie = movies.find(
-        (movie) =>
-          movie.original_title === original_title ||
-          movie.original_name === original_title
-      );
-      setMovie(findMovie);
-    }
-  }, [movies, movie]);
+    const getMovieId = async () => {
+      try {
+        const response = await axios.get(
+          `https://api.themoviedb.org/3/movie/${id}?api_key=a35f55b831697725b5b0b7255abc3736`
+        );
+
+        if (response.data) {
+          setMovie(response.data);
+          console.log(response.data);
+        } else {
+          console.error("Data not found");
+        }
+      } catch (error) {
+        console.error("Error fetching data:", error.message);
+      }
+    };
+
+    getMovieId();
+  }, [id]);
 
   return (
     <div className="content min-h-screen bg-secondary relative font-roboto">
       <img
-        src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`}
+        // src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`}
+        src={
+          movie?.backdrop_path
+            ? `https://image.tmdb.org/t/p/original/${movie.backdrop_path}`
+            : ""
+        }
         alt="backdrop"
         className="w-full h-full absolute object-cover"
       />
@@ -37,17 +53,23 @@ function DetailLayout({ movies }) {
           <div className="movie-content mt-7">
             <div className="poster-movie mb-8">
               <img
-                src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
+                src={
+                  movie?.poster_path
+                    ? `https://image.tmdb.org/t/p/original/${movie.poster_path}`
+                    : ""
+                }
                 alt="poster"
                 className="w-52 mx-auto rounded-lg shadow-md shadow-shadow"
               />
             </div>
             <div className="info-movie">
               <h1 className="font-bold text-2xl mb-2">
-                {movie.original_title || movie.original_name}
+                {movie?.original_title ||
+                  movie?.original_name ||
+                  "Title Not Available"}
               </h1>
               <p className="[text-shadow:_0_1px_0_rgb(0_0_0_/_50%)]">
-                {movie.overview}
+                {movie?.overview || "Overview Not Available"}
               </p>
             </div>
           </div>

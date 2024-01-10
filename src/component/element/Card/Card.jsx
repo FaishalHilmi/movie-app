@@ -8,9 +8,10 @@ function Card({
   original_name,
   release_date,
   first_air_date,
+  id,
 }) {
   return (
-    <Link to={`/detail/${original_name || original_title}`}>
+    <Link to={`/detail/${id}`}>
       <div className="card-wrapper">
         <div className="image rounded-lg overflow-hidden">
           <img
