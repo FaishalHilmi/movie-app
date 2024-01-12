@@ -11,7 +11,7 @@ Users should be able to:
 - Filter movies by free status.
 - View detailed information about a movie on a separate page.
 
-## Build With
+### Build With
 
 - HTML
 - Mobile-first workflow
