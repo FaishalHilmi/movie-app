@@ -40,7 +40,6 @@ function DetailLayout({ movies }) {
       );
       setMovie(findMovie || {}); // Set movie to an empty object if not found
     }
-    console.log(movie);
   }, [movies, original_title]);
 
   return (

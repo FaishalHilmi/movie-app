@@ -4,7 +4,6 @@ import Popular from "../component/layout/Popular";
 import FreeToWatch from "../component/layout/FreeToWatch";
 import getPopular from "../services/getPopular.service";
 import getMovies from "../services/getMovies.service";
-import getTvShow from "../services/getTvShow.service";
 import Navigasibar from "../component/layout/Navigasibar";
 import Footer from "../component/layout/Footer";
 import NavigasiBottom from "../component/layout/NavigasiBottom";
@@ -12,7 +11,6 @@ import NavigasiBottom from "../component/layout/NavigasiBottom";
 function Home() {
   const [popular, setPopular] = useState([]);
   const [movies, setMovies] = useState([]);
-  // const [gabung, setGabung] = useState();
 
   useEffect(() => {
     getPopular((popular) => setPopular(popular));
@@ -21,12 +19,6 @@ function Home() {
   useEffect(() => {
     getMovies((movies) => setMovies(movies));
   }, []);
-
-  // useEffect(() => {
-  //   const gabung = [...tvShow, ...movies];
-  //   setGabung(gabung);
-  //   console.log(gabung);
-  // }, [tvShow, movies]);
 
   return (
     <main className="relative bg-primary">
