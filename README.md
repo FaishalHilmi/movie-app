@@ -1,9 +1,25 @@
-# React + Vite
+# Frontend - REST The Movie Database
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+CINEMAX represents a project/challenge designed to enhance coding skills within the React.js + Vite framework by constructing a realistic project utilizing The Movie Database API.
 
-Currently, two official plugins are available:
+### Challenge
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# movie-app
+Users should be able to:
+
+- View several lists of movies on the homepage.
+- Search for movies based on the movie list using the input column.
+- Filter movies by free status.
+- View detailed information about a movie on a separate page.
+
+## Build With
+
+- HTML
+- Mobile-first workflow
+- Tailwind CSS
+- ReactJS
+- Vite
+
+### Author
+
+- Instagram - [@faisalmii](https://www.instagram.com/faisalmii)
+- Linkedin - [@faisalhilmyfad](https://www.linkedin.com/in/faishalhilmyfad)
